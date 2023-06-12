@@ -103,7 +103,7 @@ interface PluginUpdateManager {
    */
   fun getUpdatesByVersionAndFamily(
     xmlId: StringPluginId,
-    version: String,
+    version: String?,
     family: ProductFamily = ProductFamily.INTELLIJ
   ): List<PluginUpdateBean>
 

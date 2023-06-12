@@ -139,8 +139,8 @@ interface PluginRepositoryService {
   @GET("/api/plugins/{id}/updates")
   fun getUpdatesByVersionAndFamily(
     @Path("id") xmlId: String,
-    @Query("version") version: String,
-    @Query("family") family: String
+    @Query("version") version: String?,
+    @Query("family") family: String?
   ): Call<List<PluginUpdateBean>>
 
   @GET("/api/updates/{id}")
